@@ -1,0 +1,23 @@
+{
+  "name": "sbpro",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pascal Pletuseti",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.13.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-clean-css": "^2.0.12",
+    "gulp-file-include": "^0.13.7",
+    "gulp-ftp": "^1.1.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-sass": "*",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglifyjs": "^0.6.2"
+  },
+  "description": ""
+}

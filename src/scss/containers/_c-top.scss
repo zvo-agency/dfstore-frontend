@@ -1,0 +1,33 @@
+.c-top {
+  background-color: $bgcolor-image-mask;
+  background-image: url('/app/img/content/top.jpg');
+  background-position: right top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  @extend .wrapper;
+  .inner {
+    height: $height-main-slider;
+  }
+  &__content {
+    width: 60%;
+    height: 100%;
+    padding-top: 80px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    h2 {
+      font-size: 45px;
+      line-height: 1.18;
+      font-weight: 100;
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: 19px;
+      max-width: 450px;
+    }
+  }
+  &__buttonWrap {
+    padding-top: 40px;
+  }
+}

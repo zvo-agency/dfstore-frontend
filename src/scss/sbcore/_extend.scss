@@ -1,0 +1,23 @@
+@import '../_vars';
+@import '_media';
+
+.clearfix {
+	&:after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+.h1-animation {
+	position: absolute;
+	left: 5%;
+	top: 120px;
+	transition: 0.6s;
+	transform: translateY(60px);
+	transition-delay: 0.7s;
+	opacity: 0;
+}
+.wrapper {
+	padding-left: 120px;
+	padding-right: 120px;
+}

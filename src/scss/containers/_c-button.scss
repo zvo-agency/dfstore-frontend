@@ -1,0 +1,27 @@
+.c-button {
+  background-color: transparent;
+  border: 1px solid $accent-color;
+  display: inline-block;
+  min-width: 270px;
+  text-align: center;
+  height: 60px;
+  box-sizing: border-box;
+  border-radius: 60px;
+  cursor: pointer;
+  vertical-align: bottom;
+  font-size: 24px;
+  line-height: 60px;
+  color: white;
+  &--pink {
+    $bgcolor: #f582d6;
+    background-color: $bgcolor;
+    border-color: $bgcolor;
+    box-shadow: 0 11px 13px -11px $bgcolor;
+  }
+  &--orange {
+    $bgcolor: #ff8f36;
+    background-color: $bgcolor;
+    border-color: $bgcolor;
+    box-shadow: 0 11px 13px -11px $bgcolor;
+  }
+}
