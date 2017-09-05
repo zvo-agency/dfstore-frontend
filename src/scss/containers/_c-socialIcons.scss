@@ -1,0 +1,36 @@
+.c-socialIcons {
+  font-size: 0;
+  &__item {
+    display: inline-block;
+    margin-left: 5px;
+    &--facebook {
+      a {
+        background-image: url('/app/img/design/social-icon-facebook.svg');
+      }
+    }
+    &--twitter {
+      a {
+        background-image: url('/app/img/design/social-icon-twitter.svg');
+      }
+    }
+    &--linkedin {
+      a {
+        background-image: url('/app/img/design/social-icon-linkedin.svg');
+      }
+    }
+    &--pinterest {
+      a {
+        background-image: url('/app/img/design/social-icon-pinterest.svg');
+      }
+    }
+    a {
+      display: block;
+      width: 35px;
+      height: 35px;
+      border-radius: 50px;
+      background-size: 20px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+}
