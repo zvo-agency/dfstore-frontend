@@ -1,0 +1,75 @@
+.c-basic {
+  @extend .wrapper;
+  padding-top: 150px;
+  padding-bottom: 100px;
+  overflow: hidden;
+  .c-basicCard {
+    width: 25%;
+  }
+  &--pink {
+    .c-basic {
+      &__bgText {
+        text-shadow: 2px 2px 8px rgba(228, 86, 192, 0.3);
+        right: auto;
+        left: -100px;
+      }
+    }
+  }
+  &--vertical {
+    .c-basicCard {
+      width: 50%;
+    }
+    .c-basic {
+      &__top {
+        .col-50 {
+          &:nth-child(1) {
+            padding-right: 80px;
+          }
+        }
+      } 
+      &__topImg {
+        padding-bottom: 150%;
+      }
+    }
+  }
+  .c-button {
+    margin-bottom: 60px;
+    margin-top: 30px;
+  }
+  h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  p {
+    font-size: 16px;
+    line-height: 25px;
+  }
+  &__top {
+    .col-33 {
+      padding-right: 40px;
+    }
+  }
+  &__topImg {
+    padding-bottom: 60%;
+    background-size: cover;
+    background-position: center;
+  }
+  &__bgText {
+    color: white;
+    text-shadow: 2px 2px 8px rgba(235, 118, 56, 0.3);
+    position: absolute;
+    bottom: 100%;
+    right: -150px;
+    font-size: 150px;
+    font-weight: bold;
+    margin-bottom: -50px;
+    text-transform: uppercase;
+  }
+  &__cards {
+    display: flex;
+    margin-left: -17px;
+    margin-right: -17px;
+    top: -20px;
+    position: relative;
+  }
+}

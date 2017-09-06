@@ -74,6 +74,7 @@ gulp.task('files', function () {
 });
 
 gulp.task('bs', function() {
+  setTimeout(function() {
 	bs.init({
 		server: {
 			baseDir: "www/"
@@ -86,7 +87,9 @@ gulp.task('bs', function() {
 	gulp.watch(target.fontsSrc, ['fonts']);
 	gulp.watch(target.imgSrc, ['img']);
 	gulp.watch(target.filesSrc, ['files']);
-});
+    
+}, 1000);
+} );
 
 gulp.task('ftpDev', function() {
     return gulp.src('www/**/*')

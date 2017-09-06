@@ -9,20 +9,31 @@
   border-radius: 60px;
   cursor: pointer;
   vertical-align: bottom;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 60px;
-  color: white;
-  font-weight: 600;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #696969;
+  font-weight: 100;
+  text-transform: uppercase;
+  &--small {
+    min-width: 222px;
+    font-size: 16px;
+    height: 50px;
+    line-height: 50px;
+  }
   &--pink {
-    $bgcolor: #f582d6;
+    $bgcolor: #ef3a73;
     background-color: $bgcolor;
     border-color: $bgcolor;
     box-shadow: 0 11px 13px -11px $bgcolor;
+    color: white;
   }
   &--orange {
     $bgcolor: #ff8f36;
     background-color: $bgcolor;
     border-color: $bgcolor;
     box-shadow: 0 11px 13px -11px $bgcolor;
+    color: white;
   }
 }

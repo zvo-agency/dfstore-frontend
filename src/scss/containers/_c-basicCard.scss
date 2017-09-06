@@ -1,0 +1,23 @@
+.c-basicCard {
+  padding-left: 17px;
+  padding-right: 17px;
+  &__imgLink {
+    padding-bottom: 150%;
+    display: block;
+    background-color: #e1e6e6;
+    border-radius: 9px;
+  }
+  &__info {
+    padding-top: 10px;
+  }
+  h3 a, p a {
+    color: #3f3f3f; 
+  }
+  h3 {
+    font-size: 16px;
+  }
+  p {
+    font-size: 14px;
+    font-weight: 600;
+  }
+}

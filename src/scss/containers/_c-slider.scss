@@ -1,6 +1,7 @@
 .c-slider {
   max-height: $height-main-slider;
   overflow: hidden;
+  background-color: #333; 
   .slick-arrow {
     display: none !important;
   }

@@ -5,15 +5,61 @@
   right: 0;
   z-index: 200;
   @extend .wrapper;
+  &--white {
+    position: relative;
+    background-color: white;
+    .c-header {
+      &__navGroup {
+        li {
+          a {
+            color: black;
+          }
+        }
+      }
+      &__logo {
+        img {
+          &:nth-child(1) {
+            display: none;
+          }
+          &:nth-child(2) {
+            display: block;
+          }
+        }
+      }
+      &__button {
+        &--search {
+          span {
+            background-image: url('/app/img/design/icon-search-black.svg');
+          }
+        }
+        &--liked {
+          span {
+            background-image: url('/app/img/design/icon-heart-black.svg');
+            background-size: contain;
+          }
+        }
+        &--cart {
+          span {
+            background-image: url('/app/img/design/icon-cart-black.svg');
+            background-size: contain;
+          }
+        }
+      }
+    }
+  }
   .inner {
     text-align: center;
-    padding-top: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
   &__logo {
     display: inline-block;
     width: 237px;
     img {
       width: 100%;
+      &:nth-child(2) {
+        display: none;
+      }
     }
   }
   &__buttons {
