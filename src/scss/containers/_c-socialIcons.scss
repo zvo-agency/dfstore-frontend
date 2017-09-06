@@ -8,25 +8,16 @@
         background-image: url('/app/img/design/social-icon-facebook.svg');
       }
     }
-    &--twitter {
+    &--instagram {
       a {
-        background-image: url('/app/img/design/social-icon-twitter.svg');
-      }
-    }
-    &--linkedin {
-      a {
-        background-image: url('/app/img/design/social-icon-linkedin.svg');
-      }
-    }
-    &--pinterest {
-      a {
-        background-image: url('/app/img/design/social-icon-pinterest.svg');
+        background-image: url('/app/img/design/social-icon-instagram.svg');
       }
     }
     a {
+      $itemSize: 30px;
       display: block;
-      width: 35px;
-      height: 35px;
+      width: $itemSize;
+      height: $itemSize;
       border-radius: 50px;
       background-size: 20px;
       background-repeat: no-repeat;

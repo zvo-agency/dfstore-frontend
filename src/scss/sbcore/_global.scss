@@ -15,6 +15,10 @@
 		@extend .clearfix;
 	}
 }
+.flex {
+  display: flex;
+  align-items: center;
+}
 [class*="col-"] {
 	float: left;
 }
