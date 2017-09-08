@@ -6,6 +6,31 @@
     display: block;
     background-color: #e1e6e6;
     border-radius: 9px;
+    &:hover {
+      .c-basicCard {
+        &__img {
+          &:nth-child(1) {
+            display: none;
+          }
+          &:nth-child(2) {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+  &__img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    &:nth-child(2) {
+      display: none;
+    }
   }
   &__info {
     padding-top: 10px;

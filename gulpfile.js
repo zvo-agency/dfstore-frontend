@@ -88,32 +88,9 @@ gulp.task('bs', function() {
 	gulp.watch(target.imgSrc, ['img']);
 	gulp.watch(target.filesSrc, ['files']);
     
-}, 1000);
+}, 2000);
 } );
 
-gulp.task('ftpDev', function() {
-    return gulp.src('www/**/*')
-    .pipe(ftp({
-        host: 'mstrs.ftp.ukraine.com.ua',
-        user: 'mstrs_cntxtme',
-        pass: 'SwyrogLec',
-        remotePath: 'www/html/'
-     }))
-    .pipe(bs.stream())
-    .pipe(notify({message: 'FTP processed!'}));
-});
-
-gulp.task('ftpProdCss', function() {
-    return gulp.src('www/app/css/*')
-    .pipe(ftp({
-        host: 'mstrs.ftp.ukraine.com.ua',
-        user: 'mstrs_cntxtme',
-        pass: 'SwyrogLec',
-        remotePath: 'www/app/css'
-     }))
-    .pipe(bs.stream())
-    .pipe(notify({message: 'FTP processed!'}));
-});
 
 
 gulp.task('default', function() {
