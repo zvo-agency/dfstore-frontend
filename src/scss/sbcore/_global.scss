@@ -19,7 +19,7 @@
   display: flex;
   align-items: center;
 }
-[class*="col-"] {
+[class^="col-"] {
 	float: left;
 }
 .nowrap {

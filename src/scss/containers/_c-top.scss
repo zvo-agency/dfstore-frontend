@@ -6,6 +6,20 @@
   @extend .wrapper;
   .inner {
     height: $height-main-slider;
+    z-index: 50;
+  }
+  &--masked {
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: black;
+      opacity: 0.5;
+    }
   }
   &__content {
     width: 60%;

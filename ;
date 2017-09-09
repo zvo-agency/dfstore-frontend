@@ -9,13 +9,6 @@
     position: relative;
     background-color: white;
     .c-header {
-      &__navItemExtended {
-        span {
-          &:after {
-            border-color: black;
-          }
-        }
-      }
       &__navGroup {
         li {
           a {
@@ -60,7 +53,7 @@
     padding-bottom: 15px;
   }
   &__navItemExtended {
-    span {
+    a {
       &:after {
         content: '';
         display: block;
@@ -72,7 +65,7 @@
         top: 5px;
         right: -15px;
         transform: rotate(-45deg);
-        pointer-events: none;
+        cursor: pointer;
       }
       &:before {
         content: '';
@@ -80,13 +73,9 @@
         position: absolute;
         top: -5px;
         right: -20px;
-        bottom: -10px;
+        bottom: -30px;
         left: -5px;
-      }
-      &:hover {
-        &:before {
-          bottom: -70px;
-        }
+        border: 1px solid red;
       }
     }
   }
