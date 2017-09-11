@@ -4,4 +4,5 @@
 //=require other/app.js
 
 //=require functions/toggleNav.js
+//=require functions/toggleFilterItem.js
 

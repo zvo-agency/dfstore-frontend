@@ -10,11 +10,11 @@
         
         <div class="c-filter">
           <ul class="c-filter__itemsList">
-            <li class="c-filter__item">
-              <a href="#">
+            <li class="c-filter__item is-active c-filter__item--extended">
+              <a onclick="toggleFilterItem(this)">
                 Категории
                 <span class="c-filter__itemToggler">
-                  <span>-</span>
+                  <span>&ndash;</span>
                   <span>+</span>
                 </span>
               </a> 
@@ -42,37 +42,37 @@
             <ul>
               <li>
                 <div class="c-filter__oneColor">
-                  <div class="c-filter__colorCircle"></div>
+                  <div class="c-filter__colorCircle" style="background-color: #4a90e2;"></div>
                   <div class="c-filter__colorName">Синий</div>
                 </div>  
               </li>
-              <li>
+              <li class="is-active">
                  <div class="c-filter__oneColor">
-                   <div class="c-filter__colorCircle"></div>
+                   <div class="c-filter__colorCircle" style="background-color: #3dc8f1;"></div>
                    <div class="c-filter__colorName">Голубой</div>
                  </div>  
               </li>   
               <li>
                 <div class="c-filter__oneColor">
-                  <div class="c-filter__colorCircle"></div>
+                  <div class="c-filter__colorCircle" style="background-color: #b8e986;"></div>
                   <div class="c-filter__colorName">Зеленый</div>
                 </div>  
               </li>
                <li>
                 <div class="c-filter__oneColor">
-                  <div class="c-filter__colorCircle"></div>
+                  <div class="c-filter__colorCircle" style="background-color: #4a4a4a;"></div>
                   <div class="c-filter__colorName">Черный</div>
                 </div>  
               </li> 
                <li>
                <div class="c-filter__oneColor">
-                  <div class="c-filter__colorCircle"></div>
+                  <div class="c-filter__colorCircle" style="background-color: #f5a623;"></div>
                   <div class="c-filter__colorName">Оранжевый</div>
                 </div>  
               </li>
               <li>
                 <div class="c-filter__oneColor">
-                  <div class="c-filter__colorCircle"></div>
+                  <div class="c-filter__colorCircle" style="background-color: #f8e71c;"></div>
                   <div class="c-filter__colorName">Желтый</div>
                 </div>  
               </li>
@@ -84,8 +84,8 @@
       <div class="c-containerWithSidenav__cardsAndPagination">
         <div class="c-containerWithSidenav__cards">
           @@include('_c-card.html', {
-            "firstImageUrl" : "/app/img/content/card-1-1.png",
-            "secondImageUrl" : "/app/img/content/card-1-2.png",
+            "firstImageUrl" : "/app/img/content/card-2-1.png",
+            "secondImageUrl" : "/app/img/content/card-2-2.png",
             "name" : "Dark Night",
             "price" : "1200",
             "link" : "/productOne.html"
@@ -101,8 +101,8 @@
             "link" : "/productOne.html"
           })
           @@include('_c-card.html', {
-           "firstImageUrl" : "/app/img/content/card-1-1.png",
-           "secondImageUrl" : "/app/img/content/card-1-2.png",
+           "firstImageUrl" : "/app/img/content/card-3-1.png",
+           "secondImageUrl" : "/app/img/content/card-3-2.png",
            "name" : "Dark Night",
            "labelClass" : "c-card--new",
            "labelText" : "Новинка",
@@ -111,15 +111,15 @@
            "link" : "/productOne.html"
          }) 
           @@include('_c-card.html', {
-            "firstImageUrl" : "/app/img/content/card-1-1.png",
-            "secondImageUrl" : "/app/img/content/card-1-2.png",
+            "firstImageUrl" : "/app/img/content/card-4-1.png",
+            "secondImageUrl" : "/app/img/content/card-4-2.png",
             "name" : "Dark Night",
             "price" : "1200",
             "link" : "/productOne.html"
           })          
          @@include('_c-card.html', {
-          "firstImageUrl" : "/app/img/content/card-1-1.png",
-          "secondImageUrl" : "/app/img/content/card-1-2.png",
+          "firstImageUrl" : "/app/img/content/card-2-1.png",
+          "secondImageUrl" : "/app/img/content/card-2-2.png",
           "name" : "Dark Night",
           "labelClass" : "c-card--discount",
           "labelText" : "СКИДКА",
@@ -138,8 +138,8 @@
          "link" : "/productOne.html"
        }) 
         @@include('_c-card.html', {
-          "firstImageUrl" : "/app/img/content/card-1-1.png",
-          "secondImageUrl" : "/app/img/content/card-1-2.png",
+          "firstImageUrl" : "/app/img/content/card-3-1.png",
+          "secondImageUrl" : "/app/img/content/card-3-2.png",
           "name" : "Dark Night",
           "price" : "1200",
           "link" : "/productOne.html"

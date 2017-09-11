@@ -5,9 +5,27 @@
     width: 33%;
     min-width: 260px;
     max-width: 300px;
+    margin-bottom: 30px;
+  }
+  .c-filter {
+    margin-bottom: 30px;
+  }
+  &__top {
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
   &__cards {
     display: flex;
     flex-wrap: wrap;
+    padding-left: 20px;
+    margin-right: -17px;
   }
+  &__columns {
+    display: flex;
+  }
+  &__sidenavColumn {
+    width: 270px;
+    flex-shrink: 0;
+  }
+
 }
