@@ -1,0 +1,13 @@
+.c-containerWithSidenav {
+  background-color: #f0f0f0;
+  @extend .wrapper;
+  .c-card {
+    width: 33%;
+    min-width: 260px;
+    max-width: 300px;
+  }
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
