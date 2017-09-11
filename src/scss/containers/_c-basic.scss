@@ -3,8 +3,25 @@
   padding-top: 150px;
   padding-bottom: 100px;
   overflow: hidden;
+  @include a-mobile() {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
   .c-basicCard {
     width: 25%;
+    @include a-mobile() {
+      width: 50%;
+      max-width: 280px;
+      &:nth-child(3) {
+        display: none;
+      }
+    }
+  }
+  &--first {
+    padding-top: 100px;
+  }
+  &--last {
+    padding-bottom: 100px; 
   }
   &--pink {
     .c-basic {
@@ -24,6 +41,14 @@
         .col-50 {
           &:nth-child(1) {
             padding-right: 80px;
+            @include a-mobile() {
+              display: none;
+            }
+          }
+          &:nth-child(2) {
+            @include a-mobile() {
+              width: 100%;
+            }
           }
         }
       } 
@@ -47,6 +72,15 @@
   &__top {
     .col-33 {
       padding-right: 40px;
+      @include a-mobile() {
+        width: 100%;
+        padding-right: 0;
+      }
+    }
+    .col-66 {
+      @include a-mobile() {
+        display: none;
+      }
     }
   }
   &__topImg {
@@ -64,6 +98,9 @@
     font-weight: bold;
     margin-bottom: -50px;
     text-transform: uppercase;
+    @include a-mobile() {
+      display: none;
+    }
   }
   &__cards {
     display: flex;

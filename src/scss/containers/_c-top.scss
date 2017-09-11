@@ -7,6 +7,9 @@
   .inner {
     height: $height-main-slider;
     z-index: 50;
+    @include a-mobile() {
+      height: $height-main-slider-mobile;
+    }
   }
   &--masked {
     &:after {
@@ -21,6 +24,19 @@
       opacity: 0.5;
     }
   }
+  @include a-mobile() {
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: black;
+      opacity: 0.6;
+    }
+  }
   &__content {
     width: 60%;
     height: 100%;
@@ -29,18 +45,37 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+    @include a-mobile() {
+      width: 100%;
+      text-align: center;
+      padding-top: 40px;
+    }
     h2 {
       font-size: 45px;
       line-height: 1.18;
       font-weight: 100;
       margin-bottom: 15px;
+      @include ad() {
+        font-size: 35px;
+      }
+      @include a-mobile() {
+        font-size: 25px;
+      }
     }
     p {
       font-size: 19px;
       max-width: 450px;
+      @include a-mobile() {
+        margin-left: auto;
+        margin-right: auto;
+        display: none;
+      }
     }
   }
   &__buttonWrap {
     padding-top: 40px;
+    @include a-mobile() {
+      padding-top: 20px;
+    }
   }
 }

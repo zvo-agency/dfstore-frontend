@@ -64,6 +64,18 @@
   }
 }
 
+@mixin a-mobile() {
+  $width2: $a-mobile;
+  @media screen and (max-width: $width2) {
+       @content;
+  }
+}
+@mixin e-mobile() {
+  $width1: $a-mobile + 1;
+  @media screen and (min-width: $width1) {
+       @content;
+  }
+}
 @mixin e1() {
   $width1: $e1 + 1;
   @media screen and (min-width: $width1) {
@@ -75,6 +87,14 @@
 @mixin p1() {
   $width1: #{nth($p1, 1)} + 1;
   $width2: #{nth($p1, 2)};
+  @media (min-width: $width1) and (max-width: $width2) {
+       @content;
+  }
+}
+
+@mixin e-tablet() {
+  $width1: #{nth($e-tablet, 1)} + 1;
+  $width2: #{nth($e-tablet, 2)};
   @media (min-width: $width1) and (max-width: $width2) {
        @content;
   }

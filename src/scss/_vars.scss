@@ -3,6 +3,7 @@ $bgcolor-image-mask: #d0d0d0;
 $accent-color: grey;
 
 $height-main-slider: 600px;
+$height-main-slider-mobile: 400px;
 
 /*********************
 spacer
@@ -62,6 +63,7 @@ $gridSystem:          25, 50, 100;
 *------------------------------------------------------------------------------------------------------------*
 */
 $a1:                  500px;
+$a-mobile:            980px;
 
 $b:                   640px;
 $c:                   900px;
@@ -70,7 +72,7 @@ $d:                   1250px;
 $e1:                  1700px;
 
 $p1:                  630px, 1000px;
-
+$e-tablet:            600px, $a-mobile;
 
 /*********************
 width for center blocks

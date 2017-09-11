@@ -24,13 +24,50 @@
     &:nth-child(1) {
       border-bottom: 1px solid grey;
       padding-bottom: 50px;
+      .row {  
+        @include a-mobile() {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: flex-start;
+        }
+        @include e-tablet() {
+          flex-direction: row;
+          flex-wrap: wrap;
+          align-items: flex-start;
+        }
+      }
+      
       .col-25 {
         padding-right: 20px;
+        @include a-mobile() {
+          max-width: 200px;
+          width: 100%;
+          padding-right: 0;
+          float: none;
+          &:not(:last-child) {
+            padding-bottom: 50px;
+          }
+        }
+        @include e-tablet() {
+          width: 50% !important;
+          max-width: 50%;
+        }
       }
     }
     &:nth-child(2) {
       padding-top: 20px;
       padding-bottom: 40px;
+      @include a-mobile() {
+        .row {
+          flex-direction: column;
+          & > div {
+            width: 100%;
+            float: none;
+            text-align: center;
+          } 
+        }
+      }
     }
   }
   &__navVertical {
@@ -43,6 +80,12 @@
     }
   }
   &__navHorizontal {
+    @include a-mobile() {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 40px;
+    }
     li {
       text-transform: uppercase;
       display: inline-block;
@@ -52,12 +95,24 @@
       a {
         color: white;
       }
+      @include a-mobile() {
+        display: block;
+        margin-right: 0 !important;
+        &:not(:last-child) {
+          margin-bottom: 15px;
+        }
+      }
     }
   }
   &__logo {
     width: 200px;
     max-width: 80%;
     display: inline-block;
+    @include a-mobile() {
+      max-width: 150px;
+      margin-left: auto;
+      margin-right: auto;
+    }
     img {
       width: 100%;
     }

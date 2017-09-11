@@ -1,0 +1,56 @@
+.c-navButton {
+  $nav-button-width: 30px;
+  $nav-button-line-height: 3px;
+
+  display: block;
+  width: $nav-button-width;
+  height: $nav-button-width - 8;
+  border: none;
+  cursor: pointer;
+  div {
+    width: $nav-button-width;
+    height: $nav-button-line-height;
+    background: white;
+    position: absolute;
+    left: 0;
+    border-radius: 3px;
+    @extend .transition;
+    &:nth-child(1) {
+      top: 0;
+    }
+    &:nth-child(2) {
+      top: 50%;
+    }
+    &:nth-child(3) {
+      top: 50%;
+    }
+    &:nth-child(4) {
+      top: 100%;
+    }
+  }
+}
+body.is-active {
+    .c-navButton {
+        div {
+            @extend .transition-hover;
+            &:nth-child(1) {
+              top: 0;
+              opacity: 0;
+            }
+            &:nth-child(2) {
+              top: 50%;
+              transform: rotate(45deg);
+              background: $accent-color;
+            }
+            &:nth-child(3) {
+              top: 50%;
+              transform: rotate(-45deg);
+              background: $accent-color;
+            }
+            &:nth-child(4) {
+              top: 100%;
+              opacity: 0;
+            }
+        }
+    }
+}

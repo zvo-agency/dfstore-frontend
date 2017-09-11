@@ -7,11 +7,16 @@ var notify = require('gulp-notify');
 var bs = require('browser-sync').create();
 var cleanCSS = require('gulp-clean-css');
 var ftp = require('gulp-ftp');
+var include = require("gulp-include");
+var uglify = require('gulp-uglify');
+var include = require("gulp-include");  
+var pump = require('pump');
 
 var target = {
 	sassSrc       : 'src/scss/**/*.scss',
 	sassWww       : 'www/app/css/',
 	jsSrc         : 'src/js/**/*.js',
+  jsMainSrc     : 'src/js/main.js',
 	jsWww         : 'www/app/js/',
 	htmlSrc       : 'src/html/pages/*.html',
 	htmlWww       : 'www/',
@@ -50,9 +55,23 @@ gulp.task('html', function () {
 });
 
 gulp.task('js', function () {
-	gulp.src(target.jsSrc)
+	gulp.src(target.jsMainSrc)
+     .pipe(sourcemaps.init())
+    .pipe(include())
+      .on('error', console.log)
+     .pipe(sourcemaps.write())
 		.pipe(gulp.dest(target.jsWww))
 		.pipe(bs.stream())
+});
+
+gulp.task('compress', function (cb) {
+  pump([
+        gulp.src(target.jsMainSrc),
+        uglify(),
+        gulp.dest(target.jsWww)
+    ],
+    cb
+  );
 });
 
 gulp.task('fonts', function () {
@@ -74,7 +93,6 @@ gulp.task('files', function () {
 });
 
 gulp.task('bs', function() {
-  setTimeout(function() {
 	bs.init({
 		server: {
 			baseDir: "www/"
@@ -83,16 +101,14 @@ gulp.task('bs', function() {
 	gulp.watch(target.sassSrc, ['sass']);
 	gulp.watch(target.htmlSrc, ['html']);
 	gulp.watch(target.htmlWatchSrc, ['html']);
-	gulp.watch(target.jsSrc, ['js']);
+	gulp.watch(target.jsSrc, ['js', 'compress']);
 	gulp.watch(target.fontsSrc, ['fonts']);
 	gulp.watch(target.imgSrc, ['img']);
 	gulp.watch(target.filesSrc, ['files']);
-    
-}, 2000);
 } );
 
 
 
 gulp.task('default', function() {
-    gulp.run('sass', 'html', 'js', 'fonts', 'img', 'files', 'bs');
+    gulp.run('sass', 'html', 'js', 'compress', 'fonts', 'img', 'files', 'bs');
 });

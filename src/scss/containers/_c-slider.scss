@@ -2,6 +2,9 @@
   max-height: $height-main-slider;
   overflow: hidden;
   background-color: #333; 
+  @include a-mobile() {
+    max-height: $height-main-slider-mobile;
+  }
   .slick-arrow {
     display: none !important;
   }

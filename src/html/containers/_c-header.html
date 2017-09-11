@@ -1,20 +1,28 @@
 <div class="c-header @@colorModificator">
   <div class="inner">
+    @@include('_c-navButton.html')
     <a href="/" class="c-header__logo">
       <img src="/app/img/design/logo-white.svg">
       <img src="/app/img/design/logo-dark.svg">
     </a>
     <nav>
-      <ul class="c-header__navGroup c-header__navGroup--first">
-        <li class="c-header__navItemExtended"><span onmouseover="overExtendedItem()" onmouseout="outExtendedItem()"><a href="/products.html">ТОВАРЫ</a></span></li>
-        <li><a href="">О НАС</a></li>
-        <li><a href="">КЛИЕНТАМ</a></li>
-      </ul>
-      <ul class="c-header__navGroup c-header__navGroup--second">
-        <li><a href="">FAQ</a></li>
-        <li><a href="">БЛОГ</a></li>
-        <li><a href="">КОНТАКТЫ</a></li>
-      </ul>
+      @@include('_c-navButton.html')
+      <div class="c-header__navScrollable">
+        <ul class="c-header__navGroup c-header__navGroup--first">
+          <li class="c-header__navItemExtended">
+            <div onmouseover="overExtendedItem()" onmouseout="outExtendedItem()">
+              <a href="/products.html">ТОВАРЫ</a>
+            </div>
+          </li>
+          <li><a href="">О НАС</a></li>
+          <li><a href="">КЛИЕНТАМ</a></li>
+        </ul>
+        <ul class="c-header__navGroup c-header__navGroup--second">
+          <li><a href="">FAQ</a></li>
+          <li><a href="">БЛОГ</a></li>
+          <li><a href="">КОНТАКТЫ</a></li>
+        </ul>
+      </div>
     </nav>
     <ul class="c-header__buttons">
       <li class="c-header__button c-header__button--search"><span></span></li>
