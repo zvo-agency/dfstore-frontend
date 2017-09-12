@@ -1,0 +1,85 @@
+.c-cart {
+  $headerHeight: 70px;
+  $footerHeight: 150px;
+  $paddingLeft: 45px;
+  $paddingRight: 60px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 500px;
+  background-color: white;
+  z-index: 1000;
+  .c-cartItem {
+    &:not(:last-child) {
+      border-bottom: 1px solid #e2e2e2;
+      margin-bottom: 12px;
+      padding-bottom: 10px;
+    }
+  } 
+  &__closeButton {
+    position: absolute;
+    font-size: 30px;
+    top: 10px;
+    right: 10px;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    line-height: 32px;
+    cursor: pointer;
+  }
+  &__innerFlex {
+    position: absolute;
+    top: 0;
+    right: $paddingRight;
+    bottom: 0;
+    left: $paddingLeft;
+    display: flex;
+    flex-direction: column;
+  }
+  &__header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: $headerHeight;
+    left: 0;
+  }
+  &__body {
+    position: absolute;
+    top: $headerHeight;
+    right: -$paddingRight + 10;
+    bottom: $footerHeight;
+    left: 0px;
+  }
+  &__bodyScrollable {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+  }
+  &__itemsList {
+    padding-right: 40px;
+  }
+  &__footer {
+    position: absolute;
+    height: $footerHeight;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  &__buttonWrap {
+    text-align: center;
+  }
+  &__finalSum {
+    display: flex;
+    div {
+      flex-grow: 1;
+      &:nth-child(2) {
+        text-align: right;
+      }
+    }
+  }  
+}
+
